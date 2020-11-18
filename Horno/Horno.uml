@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_o1eVMCPeEeuZD-qe7Ru2eQ" name="Horno">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_o-BNMCPeEeuZD-qe7Ru2eQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_o-hjgCPeEeuZD-qe7Ru2eQ">
+    <importedPackage xmi:type="uml:Package" href="pathmap://SysML14_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_r8ja4CPeEeuZD-qe7Ru2eQ" name="stm Controlador Dial">
+    <region xmi:type="uml:Region" xmi:id="_wmNGkCPeEeuZD-qe7Ru2eQ" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_j9dWACPhEeuwFMbN7mFoLg" source="_9YRY8CPgEeuwFMbN7mFoLg" target="_g6XYcCPhEeuwFMbN7mFoLg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_iqYIECPiEeuwFMbN7mFoLg" name="setAction(poweroff)" source="__BXdsCPgEeuwFMbN7mFoLg" target="_o4GrECPhEeuwFMbN7mFoLg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Aevd0CPlEeuwFMbN7mFoLg" name="after (1s)" source="_wiNIoCPkEeuwFMbN7mFoLg" target="_9YRY8CPgEeuwFMbN7mFoLg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_JMVgECPlEeuwFMbN7mFoLg" name="after (0.25s)" source="_wiNIoCPkEeuwFMbN7mFoLg" target="_E4JHACPlEeuwFMbN7mFoLg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_88mIkCPrEeuwFMbN7mFoLg" source="_E4JHACPlEeuwFMbN7mFoLg" target="_7Bs-oCPqEeuwFMbN7mFoLg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_EVkhQCPsEeuwFMbN7mFoLg" name="inicializarRegistros()" source="_BLRIcCPsEeuwFMbN7mFoLg" target="_wiNIoCPkEeuwFMbN7mFoLg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_5XOnkCPvEeuwFMbN7mFoLg" name="noUpdate()" source="_wiNIoCPkEeuwFMbN7mFoLg" target="_v2l-0CPvEeuwFMbN7mFoLg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_-ub80CPvEeuwFMbN7mFoLg" name="escribirConsigna()" source="_v2l-0CPvEeuwFMbN7mFoLg" target="_wiNIoCPkEeuwFMbN7mFoLg"/>
+      <subvertex xmi:type="uml:State" xmi:id="_tf1goCPgEeuwFMbN7mFoLg" name="UpdateMonitor">
+        <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_9YRY8CPgEeuwFMbN7mFoLg" name="Timeout Entry" kind="entryPoint"/>
+        <connectionPoint xmi:type="uml:Pseudostate" xmi:id="__BXdsCPgEeuwFMbN7mFoLg" name="Poweroff Entry" kind="entryPoint"/>
+        <region xmi:type="uml:Region" xmi:id="_31shMCPgEeuwFMbN7mFoLg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_2vJTYCPhEeuwFMbN7mFoLg" source="_g6XYcCPhEeuwFMbN7mFoLg" target="_lr500CPhEeuwFMbN7mFoLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_4oVCkCPhEeuwFMbN7mFoLg" name="setAction(update)" source="_lr500CPhEeuwFMbN7mFoLg" target="_o4GrECPhEeuwFMbN7mFoLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_FlI3QCPiEeuwFMbN7mFoLg" source="_o4GrECPhEeuwFMbN7mFoLg" target="_A1bm4CPiEeuwFMbN7mFoLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_P63U8CPiEeuwFMbN7mFoLg" name="action == poweroff" source="_A1bm4CPiEeuwFMbN7mFoLg" target="_yRomQCPhEeuwFMbN7mFoLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_YVLN0CPtEeuwFMbN7mFoLg" name="action == update" source="_A1bm4CPiEeuwFMbN7mFoLg" target="_wiNIoCPkEeuwFMbN7mFoLg"/>
+          <subvertex xmi:type="uml:State" xmi:id="_g6XYcCPhEeuwFMbN7mFoLg" name="CalculoMedia"/>
+          <subvertex xmi:type="uml:State" xmi:id="_lr500CPhEeuwFMbN7mFoLg" name="CalculoPrecision"/>
+          <subvertex xmi:type="uml:State" xmi:id="_o4GrECPhEeuwFMbN7mFoLg" name="MuestraValor"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_A1bm4CPiEeuwFMbN7mFoLg" kind="choice"/>
+        </region>
+      </subvertex>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_yRomQCPhEeuwFMbN7mFoLg" name="ApagadoSistema"/>
+      <subvertex xmi:type="uml:State" xmi:id="_ah7k0CPjEeuwFMbN7mFoLg" name="VerificacionDial">
+        <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_E4JHACPlEeuwFMbN7mFoLg" name="Timeout Entry" kind="entryPoint"/>
+        <region xmi:type="uml:Region" xmi:id="_ah7k1CPjEeuwFMbN7mFoLg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_ah7k1SPjEeuwFMbN7mFoLg" source="_ah7k2iPjEeuwFMbN7mFoLg" target="_ah7k2yPjEeuwFMbN7mFoLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ah7k1iPjEeuwFMbN7mFoLg" source="_ah7k2yPjEeuwFMbN7mFoLg" target="_ah7k3CPjEeuwFMbN7mFoLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ah7k1yPjEeuwFMbN7mFoLg" source="_ah7k3CPjEeuwFMbN7mFoLg" target="_ah7k3SPjEeuwFMbN7mFoLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ah7k2CPjEeuwFMbN7mFoLg" name="true" source="_ah7k3SPjEeuwFMbN7mFoLg" target="_yRomQCPhEeuwFMbN7mFoLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_fkHysCPrEeuwFMbN7mFoLg" name="valorLeido()" source="_7Bs-oCPqEeuwFMbN7mFoLg" target="_Y2Je0CPrEeuwFMbN7mFoLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_s9AfYCPrEeuwFMbN7mFoLg" name="valor > 3" source="_Y2Je0CPrEeuwFMbN7mFoLg" target="__BXdsCPgEeuwFMbN7mFoLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_oJ4SICPsEeuwFMbN7mFoLg" name="valor &lt;= 3" kind="local" source="_Y2Je0CPrEeuwFMbN7mFoLg" target="_jHevQCPsEeuwFMbN7mFoLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Tr8Y4CPtEeuwFMbN7mFoLg" name="guardarValor()" source="_jHevQCPsEeuwFMbN7mFoLg" target="_wiNIoCPkEeuwFMbN7mFoLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_sVfgsCj_Eeu3HKwXyKJNYw" name="incrementoValor &lt; 0.5" source="_Y2Je0CPrEeuwFMbN7mFoLg" target="_wiNIoCPkEeuwFMbN7mFoLg"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ah7k2iPjEeuwFMbN7mFoLg" name="CalculoMedia"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ah7k2yPjEeuwFMbN7mFoLg" name="CalculoPrecision"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ah7k3CPjEeuwFMbN7mFoLg" name="MuestraValor"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_ah7k3SPjEeuwFMbN7mFoLg" name="off value" kind="choice"/>
+          <subvertex xmi:type="uml:State" xmi:id="_7Bs-oCPqEeuwFMbN7mFoLg" name="LecturaSignal"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_Y2Je0CPrEeuwFMbN7mFoLg" kind="choice"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jHevQCPsEeuwFMbN7mFoLg" name="NormalizandoValor"/>
+        </region>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_wiNIoCPkEeuwFMbN7mFoLg" name="Espera"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_BLRIcCPsEeuwFMbN7mFoLg" name=""/>
+      <subvertex xmi:type="uml:State" xmi:id="_v2l-0CPvEeuwFMbN7mFoLg" name="AproximacionValor"/>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o5QB8CPeEeuZD-qe7Ru2eQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o5Yk0CPeEeuZD-qe7Ru2eQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#/"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o91nACPeEeuZD-qe7Ru2eQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o91nASPeEeuZD-qe7Ru2eQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//activities"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o954cCPeEeuZD-qe7Ru2eQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o96fgCPeEeuZD-qe7Ru2eQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//allocations"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o97GkCPeEeuZD-qe7Ru2eQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o97GkSPeEeuZD-qe7Ru2eQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//blocks"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o97toCPeEeuZD-qe7Ru2eQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o98UsCPeEeuZD-qe7Ru2eQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//constraintblocks"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o98UsSPeEeuZD-qe7Ru2eQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o987wCPeEeuZD-qe7Ru2eQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//deprecatedelements"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o99i0CPeEeuZD-qe7Ru2eQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o99i0SPeEeuZD-qe7Ru2eQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//modelelements"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o9-J4CPeEeuZD-qe7Ru2eQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o9-w8CPeEeuZD-qe7Ru2eQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//portsandflows"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o9-w8SPeEeuZD-qe7Ru2eQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o9_YACPeEeuZD-qe7Ru2eQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o9__ECPeEeuZD-qe7Ru2eQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o9__ESPeEeuZD-qe7Ru2eQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ttmEQCPqEeuwFMbN7mFoLg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ttnSYCPqEeuwFMbN7mFoLg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
