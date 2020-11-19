@@ -15,7 +15,11 @@
       <transition xmi:type="uml:Transition" xmi:id="_88mIkCPrEeuwFMbN7mFoLg" source="_E4JHACPlEeuwFMbN7mFoLg" target="_7Bs-oCPqEeuwFMbN7mFoLg"/>
       <transition xmi:type="uml:Transition" xmi:id="_EVkhQCPsEeuwFMbN7mFoLg" name="inicializarRegistros()" source="_BLRIcCPsEeuwFMbN7mFoLg" target="_wiNIoCPkEeuwFMbN7mFoLg"/>
       <transition xmi:type="uml:Transition" xmi:id="_5XOnkCPvEeuwFMbN7mFoLg" name="noUpdate()" source="_wiNIoCPkEeuwFMbN7mFoLg" target="_v2l-0CPvEeuwFMbN7mFoLg"/>
-      <transition xmi:type="uml:Transition" xmi:id="_-ub80CPvEeuwFMbN7mFoLg" name="escribirConsigna()" source="_v2l-0CPvEeuwFMbN7mFoLg" target="_wiNIoCPkEeuwFMbN7mFoLg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_-ub80CPvEeuwFMbN7mFoLg" name="escribirConsigna()" source="_v2l-0CPvEeuwFMbN7mFoLg" target="_gSffYCqgEeuQop_-XrlL1A"/>
+      <transition xmi:type="uml:Transition" xmi:id="_2gM_ECqdEeuQop_-XrlL1A" name="after (5s)" source="_wiNIoCPkEeuwFMbN7mFoLg" target="_sFodoCqdEeuQop_-XrlL1A"/>
+      <transition xmi:type="uml:Transition" xmi:id="_BXFCACqeEeuQop_-XrlL1A" name="normalizarValores()" source="_sFodoCqdEeuQop_-XrlL1A" target="_o4GrECPhEeuwFMbN7mFoLg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_yPB9cCqgEeuQop_-XrlL1A" name="controlActuadores()" source="_gSffYCqgEeuQop_-XrlL1A" target="_AJcUwCqfEeuQop_-XrlL1A"/>
+      <transition xmi:type="uml:Transition" xmi:id="_GAadQCqhEeuQop_-XrlL1A" source="_AJcUwCqfEeuQop_-XrlL1A" target="_wiNIoCPkEeuwFMbN7mFoLg"/>
       <subvertex xmi:type="uml:State" xmi:id="_tf1goCPgEeuwFMbN7mFoLg" name="UpdateMonitor">
         <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_9YRY8CPgEeuwFMbN7mFoLg" name="Timeout Entry" kind="entryPoint"/>
         <connectionPoint xmi:type="uml:Pseudostate" xmi:id="__BXdsCPgEeuwFMbN7mFoLg" name="Poweroff Entry" kind="entryPoint"/>
@@ -56,6 +60,9 @@
       <subvertex xmi:type="uml:State" xmi:id="_wiNIoCPkEeuwFMbN7mFoLg" name="Espera"/>
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_BLRIcCPsEeuwFMbN7mFoLg" name=""/>
       <subvertex xmi:type="uml:State" xmi:id="_v2l-0CPvEeuwFMbN7mFoLg" name="AproximacionValor"/>
+      <subvertex xmi:type="uml:State" xmi:id="_sFodoCqdEeuQop_-XrlL1A" name="ISensores"/>
+      <subvertex xmi:type="uml:State" xmi:id="_AJcUwCqfEeuQop_-XrlL1A" name="IActuadores"/>
+      <subvertex xmi:type="uml:State" xmi:id="_gSffYCqgEeuQop_-XrlL1A" name="CalculoSalidas"/>
     </region>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o5QB8CPeEeuZD-qe7Ru2eQ">
